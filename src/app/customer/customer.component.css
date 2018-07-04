@@ -1,0 +1,22 @@
+.mainpage-container{
+    margin-top: 40px;
+    margin-left: 19px;
+}
+.footer1{
+    padding: 0px;padding-left: 42px !important;
+}
+ 
+.projectData_1{
+    margin-left: 19px !important;
+    width: 96%;
+    display:block;
+}
+.taskData_1{
+    margin-left: 19px !important;
+    width: 96%;
+    display:block;  
+}
+
+.customer_project{
+    float:right;margin-right:10px;padding:1px 9px 2px 8px; margin-top:-3px;
+}

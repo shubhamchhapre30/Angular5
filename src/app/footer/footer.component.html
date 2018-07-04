@@ -1,0 +1,71 @@
+<div class="footer " style="padding: 0px;">
+  <div class="footer-inner " style="padding-left: 42px !important;">
+    &copy; {{ today | date: 'yyyy' }}. Schedullo. All rights reserved.
+    </div>
+    <div class="footer-filter" style="right: 0px !important;">
+    <div class="filter-group" >
+      <ul class="list-unstyled">
+          <li id="week_last_remeber">
+            <a href="javascript:void(0)" (click)="sortshow = !sortshow;colorshow=false;statusshow=false;" [ngClass]="{filter_selected:calender_sorting!='1'}" >
+              <i class="stripicon" [ngClass]="{'sortingicon-red':calender_sorting!='1',sortingicon:calender_sorting == '1'}" > </i> Sort By </a>
+            <div class="profilterbx " id="common-sortbybox " [hidden]="!sortshow">
+              <div class="filter-listing ">
+                <select (change)="footerfilter();" [(ngModel)]="calender_sorting" id="calender_sorting " name="calender_sorting "
+                  class="col-md-10 m-wrap no-margin">
+                  <option value="1">Manual Sorting</option>
+                  <option value="2">By Priority</option>
+                  <option value="3">By Due Date</option>
+                  <option value="4">By Expected Time</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0) " (click)="colorshow = !colorshow;sortshow=false;statusshow=false;" [ngClass]="{filter_selected:user_color_id!='0'}" >
+              <i class="stripicon" [ngClass]="{'filtericon-red':user_color_id!='0',filtericon:user_color_id == '0'}" > </i> Colour </a>
+            <div class="profilterbx" id="common-colorbox" [hidden]="!colorshow">
+              <div class="filter-listing">
+                <select (change)="footerfilter();" [(ngModel)]="user_color_id" class="col-md-10 m-wrap no-margin" name="user_color_id"
+                  id="user_color_id">
+                  <option value="0">All</option>
+                  <option *ngFor="let c of color" [ngValue]="c.user_color_id"> {{c.name}} </option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)" (click)="statusshow = !statusshow;colorshow=false;sortshow=false;" [ngClass]="{filter_selected: status_all == 1}" >
+              <i class="stripicon filtericon" *ngIf="status_all == 0; else redicon" > </i>
+              <ng-template #redicon><i class="stripicon filtericon-red"> </i></ng-template> Status </a>
+            <div class="profilterbx " id="common-statusbox " [hidden]="!statusshow">
+              <div class="filter-listing ">
+                <ul class="filter-content list-unstyled ">
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" value="{{all}}" (click)="allchecked($event.target.checked);" [checked]="checkstatus('all')" class="newcheckbox_task2"/> All
+                    </label>
+                  </li>
+                  <li *ngFor="let s of status">
+                    <label class="checkbox">
+                      <input type="checkbox" value="{{s.task_status_id}}" (click)="checkedOtherStatus(s.task_status_id,$event.target.checked);" [checked]="checkstatus(s.task_status_id)" class="newcheckbox_task1" /> {{ s.task_status_name}}
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="timerbtn">
+              <a href="javascript:void(0);">&nbsp;</a>
+            <div class="profilterbx " id="common-statusbox " style="display: none;">
+              <div class="filter-listing ">
+                
+              </div>
+            </div>
+          </li>
+        </ul>
+      
+    </div>
+  </div>
+
+</div>
+  

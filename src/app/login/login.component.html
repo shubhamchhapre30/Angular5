@@ -1,0 +1,62 @@
+<div class="wrapper row1">	 
+	<div class="header-top">
+   	 	<div class="navbar login_header navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.schedullo.com"> <img src="assets/images/logo.png" alt="logo" /> </a>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
+<div class="login-block">
+    <div class="horizontal-form">
+        <div class="logoimage">
+            <img src="assets/images/logo.png"/>
+        </div>
+        <div *ngIf = "iserror" class="error_msg">{{error}}</div>
+        <form (submit)="login(login_form)" [formGroup]="login_form">
+            <div class="form-group">
+                <div class="controls">
+                    <input type="text" placeholder="Enter your email here" class="m-wrap fullwd cblk form-control login_input" formControlName="email" (blur)="getcompany_list($event.target.value);" />
+                    <p *ngIf="login_form.get('email').hasError('required')" class="help-inline">
+                        This field is required.
+                    </p>
+                    <p *ngIf="login_form.get('email').hasError('pattern')" class="help-inline">
+                        Please enter a valid email address.
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="controls">
+                    <input type="password" placeholder="Password" class="m-wrap fullwd cblk from-control login_input" formControlName="password"/>
+                    <p *ngIf="login_form.get('password').hasError('required')" class="help-inline">
+                        This field is required.
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="controls">
+                    <select name="companylist" formControlName="company_id" class="col-md-12 m-wrap fullwd cblk login_input " style="margin-bottom:15px;padding-left: 0px;" *ngIf="company_count > 1" >
+                        <option value="{{c.company_id}}" *ngFor="let c of company_list">{{c.company_name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="controls">
+                    <div class="checkboxes">
+                        <label class="login_checkbox" for="remember_me"><input type="checkbox" name="remember_me" id="remember_me" value="1" />  Remember me </label>
+                        <a href="javscript:void(0)" class="login_checkbox pull-right"> Forgot Password ? </a>
+                     </div>
+                </div>
+            </div>
+            <div class="form-group " style="margin-top:20px;" >
+                <div class="controls text-center margin-bottom-20">
+                    <input type="submit" [disabled]="!login_form.valid" class="btn blue large text-upper " id="login-btn" value="LOGIN" /> 
+                 </div>
+                 <p class="txt-normal2 text-center"> Not a user yet? <a href="javascript:void(0)" class="bluelink">Sign Up Now</a> </p>
+            </div>    
+        </form>
+    </div>
+ </div>
+ 

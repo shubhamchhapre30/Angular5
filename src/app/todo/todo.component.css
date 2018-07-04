@@ -1,0 +1,244 @@
+
+.mycalendar_table{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    display: block;
+    color: #fff;
+    background-color: #17a3e9;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.left_arrow{
+    text-shadow: none !important;
+    float: left;
+    color: #fff;
+    background-color: #26b6ff;
+}
+.right_arrow{
+    text-shadow: none !important;
+    float: right;
+    color: #fff;
+    background-color: #26b6ff;
+}
+.table{
+    table-layout: fixed;
+}
+#sample_1 td{
+    
+    max-width: 100px;
+    padding: 8px 4px !important;
+}
+.table th{
+    padding: 8px 4px !important;
+    text-align: center;
+    background-color: #fff
+}
+.table thead tr th {
+    font-size: 11px !important;
+    font-weight: 900 !important;
+}
+.hide{
+    display: none;
+}
+
+.menuList{
+    margin-right: 10px;
+    
+}
+.menuul{
+    list-style: none;
+    padding-left: 10px !important;
+    margin-bottom:0px !important;
+}
+
+.menuList a{
+    color: #000000 !important;
+    text-decoration: none !important;
+    
+}
+.menuList a:hover{
+    color: #fff !important;
+}
+
+.modal-header{
+    background-color: #F58F1F!important;
+    color: #fff !important;
+    padding: 5px !important;
+}
+
+.task_tabs{
+    padding: 5px 15px !important;
+}
+.required{
+    color: red;
+}
+.modal_label{
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+    margin-top: 0px !important;
+}
+.popup_height{
+    padding: 0px 10px 0px 10px;
+}
+
+.model-input{
+    padding: 5px !important;
+    border-radius: 5px;
+    line-height: 20px;
+    border: 1px solid #d7d9dd;
+    font-size: 12px;
+}
+
+.btn-common-red{
+    color: white;
+    text-shadow: none;
+    background-color: #f34235 !important;
+    border: 1px solid #ef2d1f !important;
+}
+.btn-common-blue{
+    color: white;
+    text-shadow: none;
+    background-color: #0088cc !important;
+}
+
+.modal-footer{
+    padding: 10px !important;
+    text-align: left !important;
+}
+.label-Greylight {
+    background-color: #908C8C !important;
+}
+
+.popup_close{
+    float: right;
+    color: #f58f1f;
+    width: 17px;
+    margin: 0 auto;
+    height: 19px;
+    background-color: #fff;
+    border-radius: 14px;
+}
+
+.progress{
+    height: 15px !important;
+}
+#sample_1 th, #sample_1 td {
+    width: 249px;
+}
+
+.filter_button{
+    padding: 3px 10px !important;
+}
+
+.filter-header{
+    padding-left: 10px !important;
+    margin-right: 2px !important;
+    background-color: #bbbb;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.calendar_filter1{
+    left: -200px !important;
+    /* position: relative !important; */
+    color: black;
+    min-width: 300px !important;
+    overflow: scroll;
+    max-height: calc(91vh - 120px);
+    height: auto;
+}
+a{
+    text-decoration: none !important;
+}
+.close{
+    opacity: 1 !important;
+}
+
+
+.modal-content {
+width:800px !Important;
+}
+.modal-open .modal{
+    overflow: hidden !important;
+}
+.padding3{
+    padding: 3px !important;
+}
+.modal-body{
+    padding: 0px !important
+}
+.add-on{
+    padding: 4px !important;
+}
+.font_weight0{
+    margin-top: 35px !important;
+    margin-right: 10px;
+}
+
+.title_edit{
+    text-decoration: none !important;
+    color: #fff !important;
+    cursor: pointer;
+  }
+
+  .paddingleftright10{
+    padding: 0 10px 0 10px !important;
+  }
+  .controls > .radio.line, .controls > .checkbox.line{
+    font-weight: normal !important;
+}
+label.task_popup{
+    font-weight: normal !important;
+}
+span.txtlabl{
+    padding-left: 0px !important;
+}
+.task_color_select{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.step_td{
+    padding-top: 2px !important;
+    width: 50px;
+    padding-bottom: 3px !important;
+}
+
+.modal.fade.in {
+    top: 1% !important;
+}
+.weekdaytext{
+    left: 5px;
+    float: left;
+    top: 5px;
+    color: #17a3e9;
+    font-size: 11px;
+    font-weight: bold;
+}
+.modal .portlet{
+    border: none !important;
+    margin-bottom: 0px !important; 
+}
+
+.border_other_task{
+    border-top: 2px dotted red;
+    padding-top: 5px !important;
+}
+.task_logo{
+    display: inline-block;
+    font-size: 1em;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 50%;
+    background: #17a3e9;
+    vertical-align: middle;
+    color: white;
+    font-weight: bold;
+}

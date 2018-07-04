@@ -1,0 +1,38 @@
+@import 'http://192.168.1.27/schedullo/default/assets/css/components.min.css';
+@import 'http://192.168.1.27/schedullo/default/assets/css/profile.min.css';
+
+.custom_company_setting{
+    overflow-x: hidden;
+    margin-left: 30px;
+    margin-bottom: 2%;
+    padding-top: 5%;
+    background: #eef1f5;
+}
+.label_des{
+    font-size: 11px !important;
+    color: #23527c !important;
+}
+.form-control{
+    border-radius: 0px !important;
+}
+.separte{
+    border-collapse: separate;
+    border-spacing: 0px 5px;
+}
+#addStatus td{
+    font-size: 13px !important;
+}
+#addStatus td a{
+    font-size: 16px !important;
+}
+.checkbox_setting{
+    margin-top: 10px;   
+}
+.btn-common-blue{
+    height: 33px !important;
+    padding: 4px 12px !important;
+    margin-left: 12px;
+}
+.font_weight{
+    font-weight: 700;
+}

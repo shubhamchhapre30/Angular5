@@ -1,0 +1,95 @@
+<div class="header navbar navbar-inverse navbar-fixed-top" style="border-bottom: 1px solid #d7d9dd !important;">
+    <div class="col-md-12" style="background-color: #fff;padding-left: 50px;">
+        <span class="pull-left" style="margin-left: 10px;margin-top: 5px;">
+            <img *ngIf="company_info.company_logo !='' else companyotherlogo" src="{{Image_url}}upload/company/{{company_info.company_logo}}" />
+            <ng-template #companyotherlogo><img src="assets/images/logo_new.png"/></ng-template>
+        </span>
+        <ul class="nav pull-right header_menu">
+            <!-- Timer icon -->
+            <li class="dropdown topnav-icon pull-left">
+                <a href="javascript:void(0);" class="tooltips dropdown-toggle">
+                    <i class="fa fa-hourglass" aria-hidden="true" style="font-size: 14px !important;"></i>
+                </a>
+            </li>
+            <!-- Search module-->
+            <li class="dropdown topnav-icon pull-left">
+                <a href="javascript:void(0);" class="tooltips dropdown-toggle">
+                    <i class="fa fa-search " aria-hidden="true" style="font-size:16px !important;"></i>
+                </a>
+            </li>
+
+            <!-- BEGIN SETTINGS DROPDOWN -->
+            <li class="dropdown topnav-icon dropdown-user pull-left">
+                <a href="javascript:void(0)" class="dropdown-toggle ">
+                    <i class="icon-cog "></i>
+                    <span class="badge"></span>
+                </a>
+                <ul class="dropdown-menu" style="left:auto;right:13px;padding: 5px  !important;margin-top: 1px !important;">
+                    <li>
+                        <a href="javascript:void(0)" [routerLink]="['/settings']">
+                            <i class="fa fa-cogs" aria-hidden="true"></i> Company Settings</a>
+                    </li>
+                    <li id="access_pricing_module">
+                        <a href="javascript:void(0)"><i style="padding-right: 2px;" class="glyphicon glyphicon-usd "></i> Price Maintenance</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- END SETTINGS DROPDOWN -->
+
+            <!-- BEGIN INBOX DROPDOWN -->
+            <li class="dropdown topnav-icon pull-left">
+             <a href="javascript:void(0)" class="dropdown-toggle" >
+                 <i class="icon-bell-alt " style="font-size:15px !important;"></i> 
+                 <span class="badge">2</span></a>
+            </li>
+            <!-- END INBOX DROPDOWN -->
+
+            <!-- START HELP DROPDOWN -->
+            <li class="dropdown topnav-icon dropdown user pull-left">
+                <a href="#" class="dropdown-toggle ">
+                    <i class=" icon-question-sign"></i>
+                    <span class="badge"></span>
+                </a>
+                <ul class="dropdown-menu" style="left:auto;right:13px;padding: 5px !important;margin-top: 1px !important;">
+                    <li>
+                        <a href='https://schedullo.atlassian.net/wiki/' target="_blank">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>Documentation
+                        </a>
+                    </li>
+                    <li>
+                        <a href='https://www.youtube.com/channel/UCrviVzl0Rs_62yZ0qusmeGg' target="_blank" >
+                            <i class="fa fa-youtube" aria-hidden="true"></i>Video Channel
+                        </a>
+                    </li>
+                    <li>
+                        <a href='javascript:void(0);'>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>Contact Support
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- END HELP DROPDOWN -->
+
+            <!-- BEGIN USER LOGIN DROPDOWN -->
+            <li class="dropdown user pull-left">
+                <a href="javascript:void(0)" class="dropdown-toggle myprofile-brand_header" >
+                    <img *ngIf="info.profile_image !='' else imgelse" src="{{Image_url}}upload/user/{{info.profile_image}}" class="profile-image"  />
+                    <ng-template #imgelse><span class="login_logo">{{info.first_name | Initialletters}}{{info.last_name |Initialletters}}</span></ng-template>
+                    <i class="icon-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu" style="left:auto;right: -1px;padding: 5px  !important; margin-top: 1px !important;">
+                    <li><a href="javascript:void(0)" [routerLink]="['/my_settings']"><i class="fa fa-cog" aria-hidden="true"></i> My Setting</a> </li>
+                    <li class="divider"> </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="logout();"><i class="fa fa-power-off" aria-hidden="true"></i> Log Out </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- END USER LOGIN DROPDOWN -->
+
+        </ul>
+
+    </div>
+</div>
